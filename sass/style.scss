@@ -1,0 +1,71 @@
+// @import 'libs/font';
+// @import 'libs/slick';
+// @import 'libs/animate.min';
+@import 'base/variables';
+// @import 'base/animations';
+
+
+// font-family: 'Aleo', serif;
+// font-family: 'Magra', sans-serif;
+// font-family: 'Red Hat Text', sans-serif;
+
+* {
+    font-family: 'Aleo', serif;
+    font-weight: 400;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+.container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    @media (max-width: 1220px) {
+        max-width: 950px;
+        padding: 0 10px;
+    }
+
+    @media (max-width: 991px) {
+        max-width: 760px;
+        padding: 0 10px;
+    }
+
+    @media (max-width: 767px) {
+        max-width: 560px;
+        padding: 0 10px;
+    }
+
+    @media (max-width: 575px) {
+        // max-width: 540px;
+        padding: 0 15px;
+    }
+}
+
+
+
+@import 'blocks/header';
+@import 'blocks/preview';
+@import 'blocks/buttons';
+@import 'blocks/titles';
+@import 'blocks/steps';
+@import 'blocks/destinations';
+@import 'blocks/stories';
+@import 'blocks/footer';
+@import 'blocks/modal';
+@import 'blocks/pageup';
+
+@import 'blocks/media';
+
+// @import 'blocks/promo';
+// @import 'blocks/header';
+
+// @import 'blocks/advantages';
+// @import 'blocks/consultation';
+// @import 'blocks/titles';
+// @import 'blocks/forms';
+// @import 'blocks/carousel';
+// @import 'blocks/catalog';
+// @import 'blocks/feed';
+// @import 'blocks/footer';
+// @import 'blocks/modal';

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<!-- EN lang causes validation error because we have Lorem ipsum text -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel</title>
+    <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="icons/favicon.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,400;0,700;1,700&family=Magra:wght@700&family=Red+Hat+Text:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <main>
+        <section id=up class="preview">
+            <header class="header">
+                <div class="container">
+                    <div class="header__wrapper">
+                        <a href="#" class="header__logo">
+                            <img src="icons/logo.svg" alt="travellogo">
+                            <span>Travel Portal</span>
+                        </a>
+                        <nav>
+                            <ul class="menu">
+                                <li class="menu__item"><a href="#preview" class="menu__link">How It Works</a></li>
+                                <li class="menu__item"><a href="#plan" class="menu__link">Plan Your Trip</a></li>
+                                <li class="menu__item"><a href="#destinations" class="menu__link">Destinations</a></li>
+                                <li class="menu__item"><a href="#stories" class="menu__link">Travel Stories</a></li>
+                                <li class="menu__item"><a href="#" class="menu__link">Account</a></li>
+                                <li class="menu__item"><a href="#social" class="menu__link">Social Media</a></li>
+                            </ul>
+                        </nav>
+                        <div class="header__buttn">
+                            <button data-modal="consultation" class="button button_mini">Login</button>
+                        </div>
+                        <div class="hamburger">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+
+            </header>
+            <div class="container" id="preview">
+
+
+                <h1 class="preview__title">Explore the beauty of the World</h1>
+                <p class="preview__desc">Receive personalized recommendations for countries, hotels, activities and
+                    more
+                </p>
+
+                <form class="preview__form" action="#">
+                    <input name="name" required placeholder="What would you like to do?" type="text">
+                    <button class="button button_submit">Start Planning</button>
+                </form>
+
+            </div>
+        </section>
+    </main>
+    <section class="steps" id="plan">
+        <div class="container">
+
+            <h2 class="title">3 STEPS TO THE PERFECT TRIP</h2>
+
+            <div class="steps__wrapper">
+                <div class="steps__item">
+                    <div class="steps__icon">
+                        <img src="icons/cyclist.svg" alt="cyclist">
+                    </div>
+                    <div class="steps__descr">Tell us what you want to do</div>
+                </div>
+                <div class="steps__item">
+                    <div class="steps__icon">
+                        <img src="icons/calendar.svg" alt="calendar">
+                    </div>
+                    <div class="steps__descr">Share us preferable dates </div>
+                </div>
+                <div class="steps__item">
+                    <div class="steps__icon">
+                        <img src="icons/plane.svg" alt="plane">
+                    </div>
+                    <div class="steps__descr">We will give you recommendations</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="destinations" id="destinations">
+        <h2 class="title">POPULAR DESTINATIONS</h2>
+        <div class="destinations__slider">
+            <div class="slide">
+                <picture>
+                    <source media="(max-width: 575px)" srcset="img/spain-small.jpg">
+                    <source media="(min-width: 576px)" srcset="img/spain.jpg">
+                    <img src="img/spain.jpg" alt="spain" class="slide__photo">
+                </picture>
+                <div class="slide__name">SPAIN</div>
+            </div>
+            <div class="slide">
+                <picture>
+                    <source media="(max-width: 575px)" srcset="img/japan-small.jpg">
+                    <source media="(min-width: 576px)" srcset="img/japan.jpg">
+                    <img src="img/japan.jpg" alt="japan" class="slide__photo">
+                </picture>
+                <div class="slide__name">JAPAN</div>
+            </div>
+            <div class="slide">
+                <picture>
+                    <source media="(max-width: 575px)" srcset="img/usa-small.jpg">
+                    <source media="(min-width: 576px)" srcset="img/usa.jpg">
+                    <img src="img/usa.jpg" alt="usa" class="slide__photo">
+                </picture>
+                <div class="slide__name">USA</div>
+            </div>
+        </div>
+
+        <ol class="carousel-indicators">
+            <li data-slide-to="1" class="dot"></li>
+            <li data-slide-to="2" class="dot dot-active"></li>
+            <li data-slide-to="3" class="dot"></li>
+        </ol>
+
+        <button class="button button_main">
+            <span class="button__arrow">
+                <img src="icons/arrow.svg" alt="arrow">
+            </span>
+            <span class="button__desc">Find More</span>
+        </button>
+    </section>
+
+    <section class="stories" id="stories">
+
+        <h2 class="title">TRAVEL STORIES</h2>
+
+        <div class="bg__wrapper">
+
+            <div class="stories__wrapper">
+                <div class="container">
+                    <div class="stories__cards">
+                        <div class="stories__card">
+                            <div class="card__img">
+                                <picture>
+                                    <source media="(max-width: 575px)" srcset="img/stories/thailand-small.jpg">
+                                    <source media="(min-width: 576px)" srcset="img/stories/thailand.jpg">
+                                    <img src="img/stories/thailand.jpg" alt="thailand">
+                                </picture>
+                            </div>
+                            <div class="card__info">
+                                <h3 class="card__title">10 Photos of Attractive Thailand</h3>
+                                <p class="card__desc">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                                    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                                    deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit...
+                                </p>
+                                <p class="card__desc card__desc-mini">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                                    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                    nulla.Lorem ipsum dolor sit a...
+                                </p>
+                                <a href="#" class="card__link">Read More</a>
+                            </div>
+                        </div>
+                        <div class="stories__card">
+                            <div class="card__img">
+                                <picture>
+                                    <source media="(max-width: 575px)" srcset="img/stories/canyon-small.jpg">
+                                    <source media="(min-width: 576px)" srcset="img/stories/canyon.jpg">
+                                    <img src="img/stories/canyon.jpg" alt="canyon">
+                                </picture>
+                            </div>
+                            <div class="card__info">
+                                <h3 class="card__title">Canyonlands National Park, Utah</h3>
+                                <p class="card__desc">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                                    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                                    deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit...
+                                </p>
+                                <p class="card__desc card__desc-mini">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                                    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                    nulla.Lorem ipsum dolor sit a...
+                                </p>
+                                <a href="#" class="card__link">Read More</a>
+                            </div>
+                        </div>
+                        <div class="stories__card">
+                            <div class="card__img">
+                                <picture>
+                                    <source media="(max-width: 575px)" srcset="img/stories/mountains-small.jpg">
+                                    <source media="(min-width: 576px)" srcset="img/stories/mountains.jpg">
+                                    <img src="img/stories/mountains.jpg" alt="mountains">
+                                </picture>
+                            </div>
+                            <div class="card__info">
+                                <h3 class="card__title">I left my heart in the Mountains!</h3>
+                                <p class="card__desc">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                                    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                                    deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit...
+                                </p>
+                                <p class="card__desc card__desc-mini">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                                    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                    nulla.Lorem ipsum dolor sit a...
+                                </p>
+                                <a href="#" class="card__link">Read More</a>
+                            </div>
+                        </div>
+                        <div class="stories__card">
+                            <div class="card__img">
+                                <picture>
+                                    <source media="(max-width: 575px)" srcset="img/stories/journey-small.jpg">
+                                    <source media="(min-width: 576px)" srcset="img/stories/journey.jpg">
+                                    <img src="img/stories/journey.jpg" alt="journey">
+                                </picture>
+                            </div>
+                            <div class="card__info">
+                                <h3 class="card__title">The Longest journey in my life!</h3>
+                                <p class="card__desc">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                                    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                                    deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur
+                                    adipiscing elit...
+                                </p>
+                                <p class="card__desc card__desc-mini">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                                    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                    nulla.Lorem ipsum dolor sit a...
+                                </p>
+                                <a href="#" class="card__link">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="button button_main">
+                        <span class="button__arrow">
+                            <img src="icons/arrow.svg" alt="arrow">
+                        </span>
+                        <span class="button__desc">See More</span>
+                    </button>
+                </div>
+            </div>
+
+            <footer>
+                <div class="container">
+                    <div class="footer">
+                        <div class="footer__elem"></div>
+                        <a href="#" class="footer__link">All Rights Reserved © Travel Portal</a>
+                        <ul class="footer__social" id="social">
+                            <li>
+                                <a href="https://rs.school/js-stage0/" class="footer__social-item">
+                                    <img src="icons/instagram.svg" alt="instagram">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/Shushu9" class="footer__social-item">
+                                    <img src="icons/youtube.svg" alt="youtube">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/Shushu9" class="footer__social-item">
+                                    <img src="icons/twitter.svg" alt="twitter">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    </section>
+
+
+
+
+    <div class="overlay">
+
+        <div class="modal" id="createAccount">
+            <div class="modal__close">&times;</div>
+            <h3 class="modal__title">Create account</h3>
+            <form class="feed-form feed-form_mt25" action="#">
+
+                <label for="email">E-mail</label>
+                <input name="email" type="email" id="email">
+                <label for="pass">Password</label>
+                <input name="pass" type="text" id="pass">
+
+                <button class="button button_modal">Sign Up</button>
+            </form>
+            <div class="divider"></div>
+            <a class="modal__link">Already have an account? <span>Log in</span></a>
+        </div>
+
+        <div class="modal" id="logIn">
+
+            <div class="modal__close">&times;</div>
+            <h3 class="modal__title">
+                Log in to your account
+            </h3>
+
+            <button class="button button_facebook">
+                <span class="button__icon">
+                    <img src="icons/facebook.svg" alt="facebook">
+                </span>
+                <span class="facebook__info">Sign In with Facebook</span>
+            </button>
+
+            <button class="button button_google">
+                <span class="button__icon">
+                    <img src="icons/google.svg" alt="google">
+                </span>
+                <span class="google__info">Sign In with Google</span>
+            </button>
+
+            <div class="modal__wrap">
+                <div class="divider__half"></div>
+                <div class="modal__choise">or</div>
+                <div class="divider__half"></div>
+            </div>
+
+            <form class="feed-form feed-form_mt25" action="#">
+                <label for="mail">E-mail</label>
+                <input name="mail" type="email" id="mail">
+                <label for="password">Password</label>
+                <input name="password" type="text" id="password">
+                <button class="button button_modal">Sign Up</button>
+            </form>
+
+            <div class="divider"></div>
+            <a class="modal__link">Already have an account? <span>Log in</span></a>
+        </div>
+
+    </div>
+
+    <a href="#up" class="pageup">
+        <img src="icons/up.svg" alt="up">
+    </a>
+
+    <!-- <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
+    <!-- <<script src="js/slick.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/wow.min.js"></script> -->
+    <script src="index.js"></script>
+</body>
+
+</html>

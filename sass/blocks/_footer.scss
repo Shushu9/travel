@@ -1,0 +1,38 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 33%;
+    padding: 15px 0 15px 0;
+
+    &__elem {
+        width: 201px;
+    }
+
+    &__link {
+        font-family: 'Red Hat Text';
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 21px;
+        color: #FFFFFF;
+        text-decoration: none;
+        transition: all 400ms ease;
+
+
+        &:hover {
+            color: $main-color;
+        }
+    }
+
+
+    &__social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+
+        &-item {
+            margin-left: 21px;
+        }
+    }
+}

@@ -1,0 +1,545 @@
+@media (max-width: 1220px) {
+    .button_submit {
+        right: 8%;
+    }
+}
+
+@media (max-width: 991px) {
+    .header {
+        background: none;
+        box-shadow: none;
+        padding-top: 25px;
+
+
+
+        .menu {
+            position: fixed;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: calc(100vh - 40px);
+            padding: 20px 15px;
+            background: #F2785C;
+            box-shadow: 0px 4px 3px rgba(13, 96, 111, 0.25);
+            border-radius: 10px;
+            transition: 0.6s all;
+            z-index: 1;
+
+            :nth-child(5),
+            :nth-child(6) {
+                display: block;
+            }
+
+            &_active {
+                left: 0;
+            }
+
+            &__item {
+                text-align: center;
+                padding-right: 0;
+                border: none;
+                margin: 10px 0;
+                padding: 5px 0;
+            }
+
+            &__link {
+                font-size: 20px;
+                display: block;
+            }
+
+        }
+
+        .hamburger {
+            display: block;
+            width: 26px;
+            height: 16px;
+
+
+            span {
+                display: block;
+                height: 3px;
+                width: 100%;
+                background-color: #fff;
+                margin-bottom: 4px;
+                transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+                border-radius: 1.5px;
+            }
+
+            &_active {
+                margin-top: 12px;
+
+                span {
+                    margin-bottom: -3px;
+
+                    &:nth-child(1) {
+                        transform: rotate(405deg);
+                    }
+
+                    &:nth-child(2) {
+                        display: none;
+                    }
+
+                    &:nth-child(3) {
+                        transform: rotate(-405deg);
+                    }
+                }
+            }
+        }
+
+        &__buttn {
+            display: none;
+        }
+
+        &__logo {
+            span {
+                &:hover {
+                    color: $main-color;
+                }
+            }
+        }
+    }
+
+    main {
+        background: url(../img/preview-bg.jpg) center center/cover no-repeat;
+    }
+
+    .preview {
+        background: linear-gradient(180deg, #0D606F 0%, rgba(13, 96, 111, 0) 25.1%);
+        padding-bottom: 120px;
+
+        &__title {
+            font-size: 45px;
+        }
+
+        &__desc {
+            padding-top: 0;
+            font-size: 18px;
+        }
+
+        &__form {
+            input {
+                width: 700px;
+                height: 80px;
+            }
+
+            .button_submit {
+                right: 3%;
+            }
+        }
+    }
+
+    .title {
+        font-size: 32px;
+    }
+
+    .steps {
+        padding: 60px 0 80px 0;
+
+        &__item:nth-child(2) {
+            padding-left: 0;
+        }
+
+        &__icon {
+            width: 70px;
+            height: 70px;
+
+            img {
+                margin: 23.5%;
+                height: 75%;
+                width: 75%;
+            }
+        }
+
+        &__descr {
+            padding-top: 20px;
+            font-size: 16px;
+        }
+    }
+
+    .destinations {
+        .slide {
+            &__photo {
+                width: 500px;
+                height: 500px;
+            }
+        }
+    }
+
+    .stories {
+        &__card {
+            flex-direction: column;
+            justify-content: center;
+
+            .card {
+                &__img {
+
+                    margin: 0 auto;
+                }
+
+                &__info {
+                    padding-top: 20px;
+                }
+
+                &__title {
+                    font-size: 22px;
+                    line-height: 22px;
+                }
+
+                &__desc {
+                    padding-top: 10px;
+                    font-size: 17px;
+                    line-height: 20px;
+                }
+
+                &__link {
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+@media (max-width: 767px) {
+    .preview {
+
+        &__title {
+            font-size: 36px;
+            line-height: 40px;
+        }
+
+        &__desc {
+            font-size: 16px;
+        }
+
+
+        &__form {
+
+            input {
+                width: calc(100% - 17px);
+                font-size: 18px;
+                padding-left: 16px;
+            }
+        }
+    }
+
+    .title {
+        font-size: 26px;
+    }
+
+
+    .steps {
+
+        &__wrapper {
+            padding: 20px 0 0 0;
+        }
+
+        &__descr {
+            font-size: 14px;
+            line-height: 12px;
+            text-align: center;
+            width: 185px;
+        }
+    }
+
+
+
+
+    .footer {
+        &__elem {
+            display: none;
+        }
+    }
+}
+
+
+
+
+
+@media (max-width: 575px) {
+
+    .button {
+        width: 92px;
+        height: 30px;
+        font-size: 11px;
+        line-height: 15px;
+    }
+
+    .header {
+        padding-top: 39px;
+
+        &__logo {
+            padding-top: 6px;
+
+            img {
+                padding-bottom: 0;
+            }
+
+            span {
+                display: none;
+            }
+        }
+
+        .hamburger {
+            padding: 0 10px 6px 0;
+        }
+
+        .menu {
+            width: calc(50% - 60px);
+            min-width: 135px;
+            height: 211px;
+            align-items: end;
+
+            &__item {
+                margin: 0;
+                text-align: right;
+            }
+
+            &__link {
+                font-size: 16px;
+                line-height: 21px;
+                padding: 0;
+                text-align: right;
+            }
+        }
+    }
+
+
+    .preview {
+        padding-bottom: 61px;
+
+        &__title,
+        &__desc {
+            display: none;
+        }
+
+        &__form {
+            margin-top: 57px;
+
+            input {
+                width: calc(100% - 17px);
+                height: 46px;
+                font-size: 14px;
+                line-height: 17px;
+                padding-left: 16px;
+            }
+        }
+    }
+
+    .title {
+        font-size: 14px;
+        line-height: 19px;
+    }
+
+    .steps {
+        padding: 19px 0 20px 0;
+
+        &__descr {
+            font-size: 10px;
+            line-height: 12px;
+            text-align: center;
+            width: 120px;
+        }
+
+        &__item:last-child {
+            .steps__icon {
+                margin-right: 0;
+            }
+
+            .steps__descr {
+                text-align: right;
+            }
+        }
+
+        &__item:first-child {
+            .steps__icon {
+                margin-left: 0;
+            }
+
+            .steps__descr {
+                text-align: left;
+                width: 90px;
+                padding-right: 30px;
+            }
+        }
+    }
+
+    .destinations {
+        position: relative;
+
+        &__slider {
+            margin: 20px auto 0 auto;
+        }
+
+        .slide {
+            &__photo {
+                width: auto;
+                height: auto;
+            }
+
+            &__name {
+                font-size: 20px;
+                line-height: 26px;
+                bottom: auto;
+                top: 4.5%;
+                left: 15px;
+            }
+
+        }
+
+        .carousel-indicators {
+
+            position: absolute;
+            top: 79%;
+            left: 50%;
+            transform: translateX(-50%);
+
+            .dot {
+                width: 8px;
+                height: 8px;
+                margin: 0 3px;
+            }
+        }
+    }
+
+    .button {
+        &_main {
+            margin-top: 6px;
+        }
+
+        &__arrow {
+
+            margin-right: 6px;
+            height: 6px;
+            line-height: 0;
+
+            img {
+                height: 6px;
+            }
+        }
+
+        &__desc {
+            font-size: 11px;
+            line-height: 15px;
+        }
+
+    }
+
+    .stories {
+        padding-top: 20px;
+
+
+        .bg__wrapper {
+            background: url(../img/stories-small.jpg) center center/cover no-repeat;
+            margin-top: 10px;
+        }
+
+        &__wrapper {
+            padding-top: 10px;
+            padding-bottom: 13px;
+        }
+
+        &__card {
+            margin-top: 0;
+            flex-direction: row;
+            margin-bottom: 10px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        .card {
+
+
+            &__info {
+                padding-top: 5px;
+                padding-left: 10px;
+            }
+
+            &__title {
+                font-size: 11px;
+                line-height: 13px;
+                font-weight: 700;
+            }
+
+            &__desc {
+                display: none;
+                font-size: 9px;
+                line-height: 11px;
+
+                &-mini {
+                    display: block;
+                }
+            }
+
+            &__link {
+                margin-top: 0;
+                font-size: 9px;
+                line-height: 11px;
+                display: block;
+            }
+        }
+
+        .button {
+            margin-top: 5px;
+        }
+    }
+
+    .footer {
+        justify-content: center;
+
+        &__link {
+            display: none;
+        }
+
+        &__social {
+            padding-left: 8px;
+
+            &-item {
+                margin: 0 10px;
+            }
+
+        }
+    }
+}
+
+
+@media (max-width: 389px) {
+
+    .steps {
+
+        &__descr {
+            width: 95px;
+        }
+
+        &__item:first-child {
+            .steps__descr {
+                padding-right: 0;
+            }
+        }
+    }
+
+    .destinations {
+        position: relative;
+
+        .slide {
+            &__photo {
+                width: 290px;
+            }
+        }
+
+        .carousel-indicators {
+            top: 75%;
+        }
+    }
+
+}

@@ -1,0 +1,51 @@
+.preview {
+    background: url(../img/preview-bg.jpg) center (center/cover) no-repeat;
+    padding-bottom: 254px;
+
+    &__title {
+        padding-top: 31px;
+        max-width: 800px;
+        font-family: 'Aleo';
+        font-weight: 700;
+        font-size: 80px;
+        line-height: 96px;
+        color: #FFFFFF;
+    }
+
+    &__desc {
+        padding-top: 33px;
+        font-family: 'Aleo';
+        font-style: italic;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        color: #FFFFFF;
+    }
+
+    &__form {
+        margin-top: 46px;
+        position: relative;
+
+
+        input {
+            width: 848px;
+            height: 92px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 16px;
+            border: none;
+            color: $main-color;
+            font-family: 'Aleo';
+            font-style: italic;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 29px;
+            padding-left: 42px;
+            letter-spacing: -.03em;
+            outline: none;
+
+            &::placeholder {
+                color: #ff4921;
+            }
+        }
+    }
+}

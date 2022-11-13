@@ -1,0 +1,68 @@
+.stories {
+    padding-top: 80px;
+
+    .bg__wrapper {
+        background: url(../img/stories.jpg) center (center/cover) no-repeat;
+        margin-top: 40px;
+    }
+
+    &__wrapper {
+        background: rgba(255, 255, 255, 0.7);
+        padding-top: 15px;
+        padding-bottom: 40px;
+
+        button {
+            margin-top: 35px;
+        }
+    }
+
+    &__card {
+        display: flex;
+        margin-top: 25px;
+    }
+
+    .card {
+        &__img {
+            filter: drop-shadow(0px 4px 4px #0D606F);
+
+            img {
+                border-radius: 16px;
+            }
+
+        }
+
+        &__info {
+            padding-left: 42px;
+        }
+
+        &__title {
+            font-size: 35px;
+            line-height: 42px;
+            color: #0D606F;
+        }
+
+        &__desc {
+            padding-top: 24px;
+            font-size: 20px;
+            line-height: 24px;
+            color: #0D606F;
+
+            &-mini {
+                display: none;
+            }
+        }
+
+        &__link {
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 24px;
+            color: #0D606F;
+            transition: all 400ms ease;
+
+
+            &:hover {
+                color: $main-color;
+            }
+        }
+    }
+}
