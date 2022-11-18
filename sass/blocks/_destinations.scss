@@ -1,16 +1,30 @@
 .destinations {
+    position: relative;
+    overflow: hidden;
 
-    &__slider {
-        position: relative;
-        margin: 46px auto 19px auto;
-        display: flex;
-        overflow: hidden;
-        justify-content: center;
+
+    .slider {
+        &__container {
+            margin: 0 auto;
+            width: 860px;
+        }
+
+        &__inner {
+            position: relative;
+            margin: 46px auto 19px auto;
+            display: flex;
+            transition: 0.5s all;
+            justify-content: center;
+        }
     }
+
 
     .slide {
         position: relative;
         margin: 0 30px;
+        width: 800px;
+        max-height: 800px;
+        flex-shrink: 0;
 
         &__photo {
             border-radius: 16px;
@@ -33,6 +47,7 @@
         justify-content: center;
         list-style: none;
         padding: 0;
+        padding-top: 4px;
     }
 
     .dot {
@@ -45,13 +60,40 @@
         cursor: pointer;
         background-color: $main-color;
         opacity: .5;
-        transition: opacity .6s ease;
+        transition: .6s ease;
+    }
 
-        &-active {
-            opacity: 1;
+    // .active {
+    //     opacity: 1;
+    // }
+
+    &__arrows {
+
+        &-prev,
+        &-next {
+            position: absolute;
+            top: 9.5%;
+            height: 800px;
+            width: 22%;
+            left: 0;
+            // background-color: rgba(11, 156, 49, 0.4);
+            z-index: 1;
+            cursor: pointer;
+
+            img {
+                display: none;
+            }
         }
+
+        &-next {
+            left: auto;
+            right: 0;
+        }
+
     }
 }
+
+
 
 // .slick-prev,
 // .slick-next {

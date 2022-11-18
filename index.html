@@ -32,17 +32,18 @@
                             <span>Travel Portal</span>
                         </a>
                         <nav>
+                            <div class="nav__overlay"></div>
                             <ul class="menu">
                                 <li class="menu__item"><a href="#preview" class="menu__link">How It Works</a></li>
                                 <li class="menu__item"><a href="#plan" class="menu__link">Plan Your Trip</a></li>
                                 <li class="menu__item"><a href="#destinations" class="menu__link">Destinations</a></li>
                                 <li class="menu__item"><a href="#stories" class="menu__link">Travel Stories</a></li>
-                                <li class="menu__item"><a href="#" class="menu__link">Account</a></li>
+                                <li class="menu__item"><a href="#" data-login class="menu__link">Account</a></li>
                                 <li class="menu__item"><a href="#social" class="menu__link">Social Media</a></li>
                             </ul>
                         </nav>
                         <div class="header__buttn">
-                            <button data-modal="consultation" class="button button_mini">Login</button>
+                            <button data-login class="button button_mini">Login</button>
                         </div>
                         <div class="hamburger">
                             <span></span>
@@ -100,36 +101,46 @@
 
     <section class="destinations" id="destinations">
         <h2 class="title">POPULAR DESTINATIONS</h2>
-        <div class="destinations__slider">
-            <div class="slide">
-                <picture>
-                    <source media="(max-width: 575px)" srcset="img/spain-small.jpg">
-                    <source media="(min-width: 576px)" srcset="img/spain.jpg">
-                    <img src="img/spain.jpg" alt="spain" class="slide__photo">
-                </picture>
-                <div class="slide__name">SPAIN</div>
+        <div class="destinations__arrows">
+            <div class="destinations__arrows-prev">
+                <img src="icons/right.svg" alt="prev">
             </div>
-            <div class="slide">
-                <picture>
-                    <source media="(max-width: 575px)" srcset="img/japan-small.jpg">
-                    <source media="(min-width: 576px)" srcset="img/japan.jpg">
-                    <img src="img/japan.jpg" alt="japan" class="slide__photo">
-                </picture>
-                <div class="slide__name">JAPAN</div>
+            <div class="destinations__arrows-next">
+                <img src="icons/right.svg" alt="next">
             </div>
-            <div class="slide">
-                <picture>
-                    <source media="(max-width: 575px)" srcset="img/usa-small.jpg">
-                    <source media="(min-width: 576px)" srcset="img/usa.jpg">
-                    <img src="img/usa.jpg" alt="usa" class="slide__photo">
-                </picture>
-                <div class="slide__name">USA</div>
+        </div>
+        <div class="slider__container">
+            <div class="slider__inner">
+                <div class="slide">
+                    <picture>
+                        <source media="(max-width: 575px)" srcset="img/spain-small.jpg">
+                        <source media="(min-width: 576px)" srcset="img/spain.jpg">
+                        <img src="img/spain.jpg" alt="spain" class="slide__photo">
+                    </picture>
+                    <div class="slide__name">SPAIN</div>
+                </div>
+                <div class="slide">
+                    <picture>
+                        <source media="(max-width: 575px)" srcset="img/japan-small.jpg">
+                        <source media="(min-width: 576px)" srcset="img/japan.jpg">
+                        <img src="img/japan.jpg" alt="japan" class="slide__photo">
+                    </picture>
+                    <div class="slide__name">JAPAN</div>
+                </div>
+                <div class="slide">
+                    <picture>
+                        <source media="(max-width: 575px)" srcset="img/usa-small.jpg">
+                        <source media="(min-width: 576px)" srcset="img/usa.jpg">
+                        <img src="img/usa.jpg" alt="usa" class="slide__photo">
+                    </picture>
+                    <div class="slide__name">USA</div>
+                </div>
             </div>
         </div>
 
         <ol class="carousel-indicators">
             <li data-slide-to="1" class="dot"></li>
-            <li data-slide-to="2" class="dot dot-active"></li>
+            <li data-slide-to="2" class="dot active"></li>
             <li data-slide-to="3" class="dot"></li>
         </ol>
 
@@ -308,10 +319,9 @@
 
 
 
-    <div class="overlay">
-
-        <div class="modal" id="createAccount">
-            <div class="modal__close">&times;</div>
+    <div class="overlay hide">
+        <div class="modal hide" id="createAccount">
+            <!-- <div data-close class="modal__close">&times;</div> -->
             <h3 class="modal__title">Create account</h3>
             <form class="feed-form feed-form_mt25" action="#">
 
@@ -319,16 +329,16 @@
                 <input name="email" type="email" id="email">
                 <label for="pass">Password</label>
                 <input name="pass" type="text" id="pass">
+                <button class="button button_modal" data-login>Sign Up</button>
 
-                <button class="button button_modal">Sign Up</button>
             </form>
             <div class="divider"></div>
-            <a class="modal__link">Already have an account? <span>Log in</span></a>
+            <a data-login class="modal__link">Already have an account? <span>Log in</span></a>
         </div>
 
-        <div class="modal" id="logIn">
+        <div class="modal hide" id="logIn">
 
-            <div class="modal__close">&times;</div>
+            <!-- <div data-close class="modal__close">&times;</div> -->
             <h3 class="modal__title">
                 Log in to your account
             </h3>
@@ -355,14 +365,14 @@
 
             <form class="feed-form feed-form_mt25" action="#">
                 <label for="mail">E-mail</label>
-                <input name="mail" type="email" id="mail">
+                <input required name="mail" type="email" id="mail">
                 <label for="password">Password</label>
-                <input name="password" type="text" id="password">
-                <button class="button button_modal">Sign Up</button>
+                <input required name="password" type="text" id="password">
+                <button class="button button_modal" type="submit">Sign In</button>
             </form>
 
             <div class="divider"></div>
-            <a class="modal__link">Already have an account? <span>Log in</span></a>
+            <a data-acc class="modal__link">Don’t have an account? <span>Register</span></a>
         </div>
 
     </div>

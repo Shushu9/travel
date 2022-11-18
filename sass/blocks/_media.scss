@@ -2,7 +2,13 @@
     .button_submit {
         right: 8%;
     }
+
+    .destinations__arrows-prev,
+    .destinations__arrows-next {
+        width: 17%;
+    }
 }
+
 
 @media (max-width: 991px) {
     .header {
@@ -26,7 +32,7 @@
             box-shadow: 0px 4px 3px rgba(13, 96, 111, 0.25);
             border-radius: 10px;
             transition: 0.6s all;
-            z-index: 1;
+            z-index: 2;
 
             :nth-child(5),
             :nth-child(6) {
@@ -50,6 +56,20 @@
                 display: block;
             }
 
+        }
+
+        .nav__overlay {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0);
+            z-index: 1;
+
+            &_active {
+                left: 0;
+            }
         }
 
         .hamburger {
@@ -160,10 +180,29 @@
     }
 
     .destinations {
+        .slider {
+            &__container {
+                width: 560px;
+            }
+        }
+
         .slide {
+            width: 500px;
+            height: 500px;
+
             &__photo {
                 width: 500px;
                 height: 500px;
+            }
+        }
+
+        &__arrows {
+
+            &-prev,
+            &-next {
+                top: 13.5%;
+                height: 500px;
+                width: 19%;
             }
         }
     }
@@ -199,6 +238,73 @@
                     line-height: 20px;
                 }
             }
+        }
+    }
+
+    .modal {
+        width: 320px;
+        padding: 15px 25px 15px 25px;
+
+        &__title {
+            font-size: 16px;
+            line-height: 20px;
+            padding-bottom: 0;
+        }
+
+        .button {
+            margin: 10px auto;
+            width: 100%;
+            height: 40px;
+            font-size: 14px;
+
+            &__icon {
+                img {
+                    height: 18px;
+                    padding-top: 4px;
+                }
+
+                padding-right: 10px;
+            }
+
+            .facebook__info,
+            .google__info {
+                font-size: 14px;
+                line-height: 15px;
+            }
+
+
+        }
+
+        &__choise {
+            font-size: 14px;
+            line-height: 16px;
+            margin: 0 5px;
+        }
+
+        label {
+            font-size: 12px;
+            line-height: 12px;
+        }
+
+        input {
+            margin-top: 0;
+            // width: 100%;
+
+            border: none;
+            height: 40px;
+            margin-bottom: 5px;
+            font-size: 14px;
+            line-height: 14px;
+        }
+
+        .divider {
+            padding-top: 0;
+        }
+
+        &__link {
+            margin-top: 5px;
+            font-size: 12px;
+            line-height: 12px;
         }
     }
 }
@@ -247,6 +353,24 @@
             line-height: 12px;
             text-align: center;
             width: 185px;
+        }
+    }
+
+    .destinations {
+        .slider {
+            &__container {
+                width: 410px;
+            }
+        }
+
+        .slide {
+            width: 350px;
+            height: 350px;
+
+            &__photo {
+                width: 350px;
+                height: 350px;
+            }
         }
     }
 
@@ -373,16 +497,55 @@
     }
 
     .destinations {
-        position: relative;
 
-        &__slider {
+        &__arrows {
+
+            &-prev,
+            &-next {
+                top: 13.5%;
+                height: 210px;
+                width: 10.5%;
+                display: flex;
+                align-items: center;
+                opacity: 0.5;
+
+                &:hover {
+                    opacity: 1;
+                }
+
+                img {
+                    display: block;
+                }
+            }
+
+            &-prev {
+                img {
+                    margin-left: 65%;
+                    transform: rotate(180deg);
+                }
+            }
+        }
+
+        .slider {
+            &__container {
+                width: 390px;
+                margin-bottom: 10px;
+            }
+        }
+
+        .slider__inner {
             margin: 20px auto 0 auto;
         }
 
         .slide {
+
+            margin: 0 15px;
+            width: 360px;
+            height: 210px;
+
             &__photo {
-                width: auto;
-                height: auto;
+                width: 360px;
+                height: 210px;
             }
 
             &__name {
@@ -401,6 +564,7 @@
             top: 79%;
             left: 50%;
             transform: translateX(-50%);
+            padding-top: 0;
 
             .dot {
                 width: 8px;
@@ -510,6 +674,42 @@
 
         }
     }
+
+    .modal {
+        width: 220px;
+
+        &__title {
+            font-size: 14px;
+            line-height: 18px;
+
+        }
+
+        .button {
+            height: 30px;
+            font-size: 12px;
+
+            .facebook__info,
+            .google__info {
+                font-size: 11px;
+                line-height: 15px;
+            }
+
+
+        }
+
+        &__choise {
+            font-size: 12px;
+        }
+
+        label {
+            font-size: 10px;
+        }
+
+        input {
+            height: 30px;
+            font-size: 12px;
+        }
+    }
 }
 
 
@@ -531,15 +731,18 @@
     .destinations {
         position: relative;
 
+        .slider__container {
+            width: 320px;
+        }
+
         .slide {
+            width: 290px;
+
             &__photo {
                 width: 290px;
             }
         }
 
-        .carousel-indicators {
-            top: 75%;
-        }
     }
 
 }
